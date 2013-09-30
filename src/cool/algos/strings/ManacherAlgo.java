@@ -7,21 +7,7 @@ import java.net.URL;
 
 public class ManacherAlgo {
 	
-	public static void main(String[] args) throws MalformedURLException, IOException {
-		InputStream stream = new URL("http://challenge.greplin.com/static/gettysburg.txt").openStream();
-		String res = "";
-		int d;
-		int c = 0;
-		byte[] b = new byte[1024];
-		while((d = stream.read(b)) != -1) {
-			for(int i=0; i<d; i++) {
-				res += (char)b[i];
-			}
-			c++;
-		}
-		System.out.println(new ManacherAlgo().getLongestPalindromeSubstring(res));
-	}
-	
+
 	/**
 	 * This is implemented using Manacher's algorithm
 	 * @param inp
